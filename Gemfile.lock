@@ -79,10 +79,15 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     erubi (1.12.0)
+    ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    hirb (0.7.3)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
+    image_processing (1.12.2)
+      mini_magick (>= 4.9.5, < 5)
+      ruby-vips (>= 2.0.17, < 3)
     io-console (0.6.0)
     irb (1.6.3)
       reline (>= 0.3.0)
@@ -101,6 +106,7 @@ GEM
       net-smtp
     marcel (1.0.2)
     method_source (1.0.0)
+    mini_magick (4.12.0)
     mini_mime (1.1.2)
     minitest (5.18.0)
     msgpack (1.6.1)
@@ -152,6 +158,8 @@ GEM
     redis (4.8.1)
     reline (0.3.2)
       io-console (~> 0.5)
+    ruby-vips (2.1.4)
+      ffi (~> 1.12)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -187,6 +195,8 @@ DEPENDENCIES
   bootsnap
   cssbundling-rails
   debug
+  hirb (~> 0.7.3)
+  image_processing (~> 1.2)
   jbuilder
   jsbundling-rails
   puma (~> 5.0)
