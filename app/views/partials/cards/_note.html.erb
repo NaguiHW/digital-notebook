@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-header">
+    <%= note.title %>
+  </div>
+  <div class="card-body">
+    <p>Date: <%= note.date.strftime("%e-%b-%y") %></p>
+    <%= link_to "Show", note_path(note), class: "btn btn-primary" %>
+  </div>
+</div>
