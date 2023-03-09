@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_action :set_note, only: [:show]
+  before_action :set_note, only: [:show, :edit, :update]
 
   def index
     order_column = params[:sort] || 'created_at'
@@ -28,6 +28,17 @@ class NotesController < ApplicationController
       redirect_to root_path, flash: { success: ['Note was created.'] }
     else
       render :new, flash: { danger: @note.errors.full_messages }
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @note.update(note_params)
+      redirect_to note_path(@note), flash: { success: ['Note was updated.'] }
+    else
+      render :edit, flash: { danger: @note.errors.full_messages }
     end
   end
 
