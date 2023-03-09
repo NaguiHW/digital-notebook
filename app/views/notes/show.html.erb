@@ -1,6 +1,9 @@
-<h1 class="my-3"><%= @note.title %></h1>
+<div class="my-3 d-flex justify-content-between align-items-center">
+  <h1><%= @note.title %></h1>
+  <%= link_to "Edit Note", edit_note_path(@note), class: "btn btn-primary", "data-controller": "turbo" %>
+</div>
 
-<%= link_to "Back", request.referer || root_path, class: "btn btn-primary mb-3" %>
+<%= render "partials/alerts/success" %>
 
 <p><%= @note.body %></p>
 

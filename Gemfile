@@ -72,3 +72,5 @@ gem 'will_paginate', '~> 3.3', '>= 3.3.1'             # Pagination
 gem 'bootstrap-will_paginate', '~> 1.0'               # Bootstrap pagination
 
 gem "faker", "~> 3.1"
+
+gem "pry", "~> 0.14.2"
