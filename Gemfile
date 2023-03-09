@@ -67,3 +67,5 @@ group :development do
   # gem "spring"
 end
 
+
+gem "hirb", "~> 0.7.3"
