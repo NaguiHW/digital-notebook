@@ -4,3 +4,29 @@
 </div>
 
 <%= render "partials/alerts/success" %>
+
+<% if @notes.length > 0 %>
+  <div class="my-3">
+    <%= link_to root_path, class: "btn btn-primary" do %>
+      Reset
+    <% end %>
+    <% @directions.each do |dir| %>
+      <%= link_to root_path(sort: dir[:column], direction: dir[:direction]), class: "btn btn-primary" do %>
+        <%= dir[:column].capitalize %> <%= dir[:direction] == :asc ? "↓" : "↑" %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="custom-grid">
+    <% @notes.each do |note| %>
+      <%= render "partials/cards/note", note: note %>
+    <% end %>
+  </div>
+  <div class="d-flex justify-content-center mt-3">
+    <%= will_paginate @my_affiliates, renderer: WillPaginate::ActionView::Bootstrap4LinkRenderer %>
+  </div>
+<% else %>
+  <div class="alert alert-info">
+    No notes found.
+  </div>
+<% end %>
