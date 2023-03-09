@@ -1,0 +1,7 @@
+<h1 class="my-3"><%= @note.title %></h1>
+
+<%= link_to "Back", request.referer || root_path, class: "btn btn-primary mb-3" %>
+
+<p><%= @note.body %></p>
+
+<p>Date: <%= @note.date.strftime("%e-%b-%y") %></p>

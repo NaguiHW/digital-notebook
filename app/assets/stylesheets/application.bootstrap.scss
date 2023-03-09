@@ -1,2 +1,20 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+@include media-breakpoint-down(lg) {
+  .custom-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .custom-grid {
+    grid-template-columns: 1fr;
+  }
+}
